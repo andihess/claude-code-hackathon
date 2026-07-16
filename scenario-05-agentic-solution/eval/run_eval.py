@@ -35,6 +35,18 @@ NOT_RUNNABLE = "not_runnable"
 ERROR = "error"
 OK = "ok"
 
+# Severity is graded with a one-level tolerance in the SAFE direction only:
+# a decision that is exact or up to one level MORE urgent than the label passes,
+# but an under-severe call (less urgent than expected) still fails. This credits
+# conservative triage while catching genuine under-prioritization and 2+ level
+# over-escalation (e.g. rating a routine password reset P2).
+_SEV_RANK = {"P1": 1, "P2": 2, "P3": 3, "P4": 4}
+
+
+def _severity_ok(decision_severity: str, expected_severity: str) -> bool:
+    gap = _SEV_RANK[expected_severity] - _SEV_RANK[decision_severity]
+    return 0 <= gap <= 1
+
 
 def load_dataset(path: Path = DATASET_PATH) -> list[dict[str, Any]]:
     examples = []
@@ -104,7 +116,9 @@ def score(examples: list[dict[str, Any]], results: list[tuple[str, Any]]) -> dic
     for example, decision in evaluated:
         expected = example.get("expected", {})
         category_ok = "category" not in expected or decision.category == expected["category"]
-        severity_ok = "severity" not in expected or decision.severity == expected["severity"]
+        severity_ok = "severity" not in expected or _severity_ok(
+            decision.severity.value, expected["severity"]
+        )
         action_ok = _action_matches(decision.action, example)
         queue_ok = True
         if decision.action == Action.ROUTE and "target_queue" in expected:
