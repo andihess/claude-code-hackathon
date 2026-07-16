@@ -141,7 +141,7 @@ async def triage(request: dict[str, Any]) -> TriageDecision:
         system_prompt=SYSTEM_PROMPT,
         mcp_servers={"helpdesk": _helpdesk_mcp_server()},
         allowed_tools=_helpdesk_tool_names(),
-        output_format=DECISION_JSON_SCHEMA,
+        output_format={"type": "json_schema", "schema": DECISION_JSON_SCHEMA},
         max_turns=MAX_TURNS,
     )
 
