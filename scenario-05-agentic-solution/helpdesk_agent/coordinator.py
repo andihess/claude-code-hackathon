@@ -28,14 +28,6 @@ from .validation import MAX_RETRIES, ValidationFailure, build_retry_feedback, va
 # Single config spot for model choice, per CLAUDE.md's Python conventions.
 MODEL = "sonnet"
 
-HELPDESK_TOOLS = [
-    "mcp__helpdesk__kb_lookup",
-    "mcp__helpdesk__lookup_requester",
-    "mcp__helpdesk__lookup_asset",
-    "mcp__helpdesk__check_queue_load",
-    "mcp__helpdesk__route_ticket",
-]
-
 MAX_TURNS = 20
 
 SYSTEM_PROMPT = """\
@@ -92,9 +84,18 @@ def _helpdesk_mcp_server() -> Any:
     tools land, per CLAUDE.md's tool-exposure convention
     (mcp__helpdesk__<tool_name>).
     """
-    from .tools import helpdesk_mcp_server  # noqa: PLC0415
+    from .tools import helpdesk_server  # noqa: PLC0415
 
-    return helpdesk_mcp_server
+    return helpdesk_server
+
+
+def _helpdesk_tool_names() -> list[str]:
+    """The mcp__helpdesk__<tool_name> allow-list, sourced from Track A's
+    tools module so the two tracks can't silently drift apart.
+    """
+    from .tools import TOOL_NAMES  # noqa: PLC0415
+
+    return TOOL_NAMES
 
 
 def _fallback_escalate(errors: list[ValidationFailure], last_raw: dict[str, Any]) -> TriageDecision:
@@ -139,7 +140,7 @@ async def triage(request: dict[str, Any]) -> TriageDecision:
         model=MODEL,
         system_prompt=SYSTEM_PROMPT,
         mcp_servers={"helpdesk": _helpdesk_mcp_server()},
-        allowed_tools=HELPDESK_TOOLS,
+        allowed_tools=_helpdesk_tool_names(),
         output_format=DECISION_JSON_SCHEMA,
         max_turns=MAX_TURNS,
     )
