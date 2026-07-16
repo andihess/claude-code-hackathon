@@ -57,9 +57,9 @@ by itself; impact and scope do.
 | Sev | Definition | Examples |
 |-----|------------|----------|
 | **P1** | Business-down or many users blocked; security incident in progress | Site outage, active breach, exec fully unable to work before a board meeting |
-| **P2** | One user fully blocked, or a team degraded, no workaround | Can't log in at all, shared drive down for a team |
+| **P2** | One user fully blocked, or a team degraded, no workaround | Can't log in at all *with no quick fix* (account/identity broken, SSO down), shared drive down for a team |
 | **P3** | Degraded but has a workaround | Slow VPN, one app flaky |
-| **P4** | Low / cosmetic / request | "How do I…", cosmetic UI, non-urgent access request |
+| **P4** | Low / cosmetic / request | "How do I…", cosmetic UI, non-urgent access request, **routine password reset** (immediate standard fix — a lockout is transient, so don't raise on urgency) |
 
 ## Action rules — explicit (category + confidence + impact)
 
