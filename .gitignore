@@ -137,6 +137,10 @@ celerybeat.pid
 # Helpdesk agent runtime artifacts (route_ticket write log)
 routed_tickets.jsonl
 
+# Reasoning-chain logs and local scratch runners
+logs/
+scratch_*.py
+
 # Environments
 .env
 .envrc
