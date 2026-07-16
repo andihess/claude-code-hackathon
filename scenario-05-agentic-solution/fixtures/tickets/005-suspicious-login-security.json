@@ -1,0 +1,6 @@
+{
+  "subject": "Got an alert about a sign-in from another country",
+  "body": "I just received a 'new sign-in' notification for my account from a location I've never been to. I did not authorize this. I can still log in myself right now but I'm worried someone else has my password.",
+  "channel": "email",
+  "requester_email": "priya.nair@example.com"
+}
