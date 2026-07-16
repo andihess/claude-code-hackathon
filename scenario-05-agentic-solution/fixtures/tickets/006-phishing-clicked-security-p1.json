@@ -2,5 +2,5 @@
   "subject": "I think I clicked a phishing link and entered my password",
   "body": "I clicked a link in an email that looked like it was from IT and typed in my username and password before I realized the page looked wrong. This happened five minutes ago.",
   "channel": "chat",
-  "requester_email": "sam.rivera@example.com"
+  "requester_email": "marcus.bello@acme-synthetic.example"
 }

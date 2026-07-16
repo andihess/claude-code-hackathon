@@ -2,5 +2,5 @@
   "subject": "Whole floor lost internet - nobody can work",
   "body": "The entire 4th floor lost network connectivity about 20 minutes ago. No one on the floor can reach email, the CRM, or any internal tools. It's not just wifi - wired ports are dead too. Roughly 60 people are sitting idle.",
   "channel": "web_form",
-  "requester_email": "facilities.oncall@example.com"
+  "requester_email": "marcus.bello@acme-synthetic.example"
 }

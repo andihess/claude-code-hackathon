@@ -2,5 +2,5 @@
   "subject": "Z: shared drive unreachable for the whole finance team",
   "body": "Nobody on the finance team can reach the Z: shared drive since this morning. We all get 'network path not found.' We have a reporting deadline today at 5pm and can't access the files we need.",
   "channel": "email",
-  "requester_email": "finance.lead@example.com"
+  "requester_email": "dana.okafor@acme-synthetic.example"
 }
