@@ -1,0 +1,40 @@
+{
+  "_comment": "Synthetic queue-load snapshot for check_queue_load. No real data. Keyed by queue name (matches CATEGORY_QUEUE_MAP in schema.py).",
+  "queues": {
+    "identity-access": {
+      "queue": "identity-access",
+      "open_tickets": 12,
+      "agents_available": 4,
+      "avg_wait_minutes": 18,
+      "status": "normal"
+    },
+    "network-ops": {
+      "queue": "network-ops",
+      "open_tickets": 37,
+      "agents_available": 3,
+      "avg_wait_minutes": 55,
+      "status": "backlogged"
+    },
+    "desktop-support": {
+      "queue": "desktop-support",
+      "open_tickets": 9,
+      "agents_available": 6,
+      "avg_wait_minutes": 8,
+      "status": "normal"
+    },
+    "app-support": {
+      "queue": "app-support",
+      "open_tickets": 21,
+      "agents_available": 5,
+      "avg_wait_minutes": 25,
+      "status": "normal"
+    },
+    "security-incident": {
+      "queue": "security-incident",
+      "open_tickets": 2,
+      "agents_available": 3,
+      "avg_wait_minutes": 5,
+      "status": "normal"
+    }
+  }
+}

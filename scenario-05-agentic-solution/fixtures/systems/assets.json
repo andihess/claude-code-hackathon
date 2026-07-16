@@ -1,0 +1,60 @@
+{
+  "_comment": "Synthetic asset/device records for lookup_asset. No real data. Keyed by asset tag.",
+  "assets": {
+    "LT-4471": {
+      "asset_tag": "LT-4471",
+      "type": "laptop",
+      "model": "Dell Latitude 7440",
+      "os": "Windows 11 Pro",
+      "assigned_to": "dana.okafor@acme-synthetic.example",
+      "status": "active",
+      "warranty_expires": "2027-03-01",
+      "encrypted": true,
+      "last_seen": "2026-07-15"
+    },
+    "LT-1002": {
+      "asset_tag": "LT-1002",
+      "type": "laptop",
+      "model": "MacBook Pro 14 (M3)",
+      "os": "macOS 15",
+      "assigned_to": "marcus.bello@acme-synthetic.example",
+      "status": "active",
+      "warranty_expires": "2028-01-15",
+      "encrypted": true,
+      "last_seen": "2026-07-16"
+    },
+    "MOB-3391": {
+      "asset_tag": "MOB-3391",
+      "type": "mobile",
+      "model": "iPhone 15",
+      "os": "iOS 18",
+      "assigned_to": "marcus.bello@acme-synthetic.example",
+      "status": "active",
+      "warranty_expires": "2027-09-20",
+      "encrypted": true,
+      "last_seen": "2026-07-16"
+    },
+    "LT-5567": {
+      "asset_tag": "LT-5567",
+      "type": "laptop",
+      "model": "Lenovo ThinkPad X1",
+      "os": "Ubuntu 24.04 LTS",
+      "assigned_to": "lin.wei@acme-synthetic.example",
+      "status": "active",
+      "warranty_expires": "2026-11-30",
+      "encrypted": true,
+      "last_seen": "2026-07-14"
+    },
+    "LT-9903": {
+      "asset_tag": "LT-9903",
+      "type": "laptop",
+      "model": "Dell Latitude 5540",
+      "os": "Windows 11 Pro",
+      "assigned_to": null,
+      "status": "in_repair",
+      "warranty_expires": "2026-08-10",
+      "encrypted": true,
+      "last_seen": "2026-07-02"
+    }
+  }
+}

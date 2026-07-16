@@ -1,0 +1,65 @@
+{
+  "_comment": "Synthetic requester directory for lookup_requester. No real data. Keyed by lowercase email.",
+  "requesters": {
+    "dana.okafor@acme-synthetic.example": {
+      "employee_id": "E10432",
+      "full_name": "Dana Okafor",
+      "email": "dana.okafor@acme-synthetic.example",
+      "department": "Finance",
+      "org_unit": "finance-ap",
+      "title": "Accounts Payable Analyst",
+      "manager_email": "priya.rao@acme-synthetic.example",
+      "location": "Chicago, IL",
+      "vip": false,
+      "identity_verified": true,
+      "mfa_enrolled": true,
+      "account_status": "active",
+      "assigned_assets": ["LT-4471"]
+    },
+    "marcus.bello@acme-synthetic.example": {
+      "employee_id": "E20988",
+      "full_name": "Marcus Bello",
+      "email": "marcus.bello@acme-synthetic.example",
+      "department": "Executive",
+      "org_unit": "exec-office",
+      "title": "Chief Financial Officer",
+      "manager_email": null,
+      "location": "New York, NY",
+      "vip": true,
+      "identity_verified": true,
+      "mfa_enrolled": true,
+      "account_status": "active",
+      "assigned_assets": ["LT-1002", "MOB-3391"]
+    },
+    "lin.wei@acme-synthetic.example": {
+      "employee_id": "E30145",
+      "full_name": "Lin Wei",
+      "email": "lin.wei@acme-synthetic.example",
+      "department": "Engineering",
+      "org_unit": "eng-platform",
+      "title": "Software Engineer",
+      "manager_email": "sofia.alvarez@acme-synthetic.example",
+      "location": "Remote (WA)",
+      "vip": false,
+      "identity_verified": true,
+      "mfa_enrolled": false,
+      "account_status": "active",
+      "assigned_assets": ["LT-5567"]
+    },
+    "temp.contractor@acme-synthetic.example": {
+      "employee_id": "C90011",
+      "full_name": "Jordan Vance",
+      "email": "temp.contractor@acme-synthetic.example",
+      "department": "Marketing",
+      "org_unit": "mktg-contract",
+      "title": "Contract Designer",
+      "manager_email": "ella.nguyen@acme-synthetic.example",
+      "location": "Remote (TX)",
+      "vip": false,
+      "identity_verified": false,
+      "mfa_enrolled": false,
+      "account_status": "suspended",
+      "assigned_assets": []
+    }
+  }
+}

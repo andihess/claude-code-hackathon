@@ -1,0 +1,54 @@
+{
+  "_comment": "Index of synthetic KB articles for kb_lookup. No real data. `keywords` drive naive matching; body lives in <id>.md.",
+  "articles": [
+    {
+      "id": "KB-1001",
+      "title": "Reset a forgotten password (self-service + agent-assisted)",
+      "category": "access",
+      "keywords": ["password", "reset", "forgot", "locked out", "login", "sign in", "credentials"],
+      "summary": "Steps to reset a user password once identity is verified; eligible for auto-resolution for verified requesters."
+    },
+    {
+      "id": "KB-1002",
+      "title": "MFA device lost or replaced",
+      "category": "access",
+      "keywords": ["mfa", "2fa", "authenticator", "token", "lost phone", "new phone", "verification code"],
+      "summary": "Re-enroll multi-factor authentication when a user loses or replaces their device."
+    },
+    {
+      "id": "KB-2001",
+      "title": "VPN slow or dropping connection",
+      "category": "network",
+      "keywords": ["vpn", "slow", "disconnect", "dropping", "latency", "remote access", "tunnel"],
+      "summary": "Troubleshooting for degraded VPN performance; workaround steps before routing to network-ops."
+    },
+    {
+      "id": "KB-2002",
+      "title": "Shared drive or file share unreachable",
+      "category": "network",
+      "keywords": ["shared drive", "file share", "network drive", "smb", "unreachable", "mapped drive"],
+      "summary": "Diagnose access to shared network storage for one user vs a whole team."
+    },
+    {
+      "id": "KB-3001",
+      "title": "Laptop won't power on or won't charge",
+      "category": "hardware",
+      "keywords": ["laptop", "power", "won't turn on", "charge", "battery", "dead", "boot"],
+      "summary": "Hardware triage for a non-booting or non-charging laptop; when to dispatch desktop-support."
+    },
+    {
+      "id": "KB-4001",
+      "title": "Application crashes or won't launch",
+      "category": "software",
+      "keywords": ["app", "application", "crash", "won't open", "error", "freezes", "install"],
+      "summary": "General software troubleshooting: cache, reinstall, version check before routing to app-support."
+    },
+    {
+      "id": "KB-5001",
+      "title": "Suspected phishing or account compromise",
+      "category": "security",
+      "keywords": ["phishing", "suspicious email", "compromise", "hacked", "malware", "breach", "unauthorized"],
+      "summary": "Do NOT auto-resolve. Preserve evidence and escalate to security-incident immediately."
+    }
+  ]
+}
