@@ -118,14 +118,22 @@ def test_score_skips_non_ok_results():
     assert metrics == {"evaluated": 0, "skipped": 1}
 
 
-def test_run_one_returns_not_runnable_when_coordinator_is_a_stub(monkeypatch, tmp_path):
-    """Sanity check against the real (currently-stub) coordinator.triage()."""
+def test_run_one_maps_not_implemented_to_not_runnable(monkeypatch, tmp_path):
+    """run_one maps a NotImplementedError from triage() to NOT_RUNNABLE.
+
+    The coordinator is now implemented, so we stub triage() to raise rather
+    than relying on it being a stub (which it no longer is).
+    """
     import run_eval
 
     ticket_path = tmp_path / "ticket.json"
     ticket_path.write_text('{"subject": "x", "body": "y", "channel": "email", "requester_email": "a@example.com"}')
 
+    async def _raise_not_implemented(_ticket):
+        raise NotImplementedError
+
     monkeypatch.setattr(run_eval, "ROOT", tmp_path)
+    monkeypatch.setattr(run_eval, "triage", _raise_not_implemented)
     status, _ = asyncio.run(run_eval.run_one({"id": "x", "ticket_file": "ticket.json"}))
 
     assert status == run_eval.NOT_RUNNABLE
